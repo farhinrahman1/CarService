@@ -41,15 +41,21 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
     <?php include('partials/navbar.php'); ?>
     <div class="container">
         <h1>Login</h1>
-        <div class="form">
+        <div class="form1">
         <form action="login.php" method="post">
-            <label for="email"><h3>Email</h3></label>
-            <input class="email" type="email" name="email" id="email" required>
+            <div>
+            <label for="email"><h4>Email</h4></label>
+            <input  class="email2" type="email" name="email" id="email" required>
             <br><br>
-            <label for="password"><h3>Password</h3></label>
-            <input class="password" type="password" name="password" id="password" required>
-            <button class="btn" type="submit">Login</button>
+            </div>
+            <div>
+            <label for="password"><h4>Password</h4></label>
+            <input class="password2" type="password" name="password" id="password" required>
+            </div>
+            <button class="btn1" type="submit">Login</button>
         </form>
         </div>
+    </div>
+    <?php include('partials/footer.php'); ?>
 </body>
 </html>

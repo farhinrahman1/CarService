@@ -15,7 +15,7 @@ include('dbconnect.php');
     <?php
     include('partials/navbar.php');
     ?>
-    <div class="container">
+    <div class="container-index">
         <h1>Welcome to CarService</h1>
         <p>Book an appointment for your car service</p>
         <p>Get your car serviced by the best mechanics in town, at the best price</p>
