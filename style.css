@@ -222,3 +222,38 @@ a{
     border-radius: 5px;
     cursor: pointer;
 }
+/* thankyou.php */
+.container-thankyou h2{
+    text-align: center;
+    margin-top: 80px;
+    font-size: 50px;
+    font-weight: bold; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
+    margin-top: 10%;    
+}
+.btn3{
+    display: block;
+    width: 30%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #182831;
+    color: #EAEBED;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    border: 2px solid #182831;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: auto;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.btn3 a{
+    text-decoration: none;
+    color: #EAEBED;
+}
+.btn3:hover{
+    background-color: #EAEBED;
+    color: #182831;
+}
