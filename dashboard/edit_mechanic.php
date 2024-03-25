@@ -5,18 +5,24 @@ include('dbconnect.php');
 if ($_SESSION['email']==null || $_SESSION['email']==""){
     header('Location: login.php');
 }
-
-if ($_SESSION['REQUEST_METHOD']=='POST'){
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $sql = "SELECT * FROM mechanic WHERE id = '$id'";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+}
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
     $maxCars = $_POST['maxCars'];
-    $sql = "INSERT INTO mechanic (name, maxCars) VALUES ('$name', '$maxCars')";
+
+    $sql = "UPDATE mechanic SET name='$name', maxCars='$maxCars' WHERE id='$id'";
+
     if (mysqli_query($conn, $sql)) {
-        header('Location: mechanics.php');
+        header('Location: mechanic.php');
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +37,7 @@ if ($_SESSION['REQUEST_METHOD']=='POST'){
     <a href="mechanic.php">Mechanics</a>
     <a href="contact.php">Contact</a>
 
-    <h1>Add Mechanic</h1>
+    <h1>Edit Mechanic</h1>
     <form action="add_mechanic.php" method="POST">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name"><br>
