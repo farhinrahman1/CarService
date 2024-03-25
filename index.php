@@ -20,7 +20,7 @@ include('dbconnect.php');
         <p>Book an appointment for your car service</p>
         <p>Get your car serviced by the best mechanics in town, at the best price</p>
         <p>We offer the best service in town</p>
-        <a href="appointment.php"><button class="btn" type="submit">Book an Appointment</button></a>
+        <a href="book_appointment.php"><button class="btn" type="submit">Book an Appointment</button></a>
     </div>
     <?php
     include('partials/footer.php');

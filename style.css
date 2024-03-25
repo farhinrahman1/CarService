@@ -257,3 +257,94 @@ a{
     background-color: #EAEBED;
     color: #182831;
 }
+/* book appointment */
+.container_book{
+    width: 30%;
+    margin: auto;
+    background-color: #182831;
+    color: #EAEBED;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.container_book h2{
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom:5px;
+    margin-top:5px;
+}
+.book-form{
+    width: 80%;
+    margin: auto;
+    background-color: #EAEBED;
+    color: #182831;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.text1{
+    margin-left: 5px;
+}
+.same{
+    margin-top: 10px;
+    width: 100%;
+    padding: 5px;
+    font-size: 10px;
+    border: 2px solid #182831;
+    border-radius: 5px;
+}
+.li1{
+    margin-top:7px;
+}
+.btn-book{
+    background-color: #182831;
+    color: #EAEBED;
+    width: 40%;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* contact.php */
+.container-contact{
+    width: 30%;
+    margin: auto;
+    background-color: #182831;
+    color: #EAEBED;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 90px;
+}
+.container-contact h2{
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom:5px;
+    margin-top:5px;
+}
+.contact-form{
+    width: 80%;
+    margin: auto;
+    background-color: #EAEBED;
+    color: #182831;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.text-contact{
+    margin-left: 5px;
+}
+.mes{
+    width: 100%;
+    padding: 30px;
+}
+.contact-btn{
+    background-color: #182831;
+    color: #EAEBED;
+    width: 40%;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
