@@ -19,6 +19,7 @@
         <a class="navbar-brand" href="signup.php">Signup</a>
         <a class="navbar-brand" href="contact.php">Contact</a>
         </div>
+    </nav>
         <?php
         if (isset($_SESSION['role'])){
             if ($_SESSION['role'] == 'admin'){

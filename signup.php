@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
     $phone=$_POST['phone'];
     $password=password_hash($_POST['password'],PASSWORD_DEFAULT);
     
-    $emailCheck="SELECT * FROM users WHERE email='$email'";
+    $emailCheck="SELECT * FROM user WHERE email='$email'";
     $result=mysqli_query($conn,$emailCheck);
 
     if (mysqli_num_rows($result)>0){
@@ -16,10 +16,10 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
         die();
     }
     else{
-        $sql="INSERT INTO users (email,name,phone,password) VALUES ('$email','$name','$phone','$password')";
+        $sql="INSERT INTO user (email,name,phone,password) VALUES ('$email','$name','$phone','$password')";
         $result=mysqli_query($conn,$sql);
         if ($result){
-            $user="SELECT * FROM users WHERE email='$email'";
+            $user="SELECT * FROM user WHERE email='$email'";
             $result=mysqli_query($conn,$user);
             $row=mysqli_fetch_assoc($result);
             $verify=password_verify($_POST['password'],$row['password']);
@@ -28,16 +28,14 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
                 $_SESSION['name']=$row['name'];
                 $_SESSION['phone']=$row['phone'];
                 $_SESSION['role']=$row['role'];
+                $_SESSION['password']=$row['password'];
                 header('Location: index.php');
             }
             else{
-                echo "<script>alert('Error')</script>";
+                echo "Error: ".$sql."<br>".mysqli_error($conn);
             }
-        }
-        else{
-            echo "<script>alert('Error')</script>";
-        }
     }
+}
 }
 ?>
 <!DOCTYPE html>

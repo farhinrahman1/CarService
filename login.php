@@ -5,7 +5,7 @@ require './dbconnect.php';
 if ($_SERVER['REQUEST_METHOD']=='POST'){
     $email=$_POST['email'];
 
-    $user="SELECT * FROM users WHERE email='$email'";
+    $user="SELECT * FROM user WHERE email='$email'";
     $result=mysqli_query($conn,$user);
 
     if (mysqli_num_rows($result)==0){
